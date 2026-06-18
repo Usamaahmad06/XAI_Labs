@@ -1,0 +1,2 @@
+activation_rate_logic_test=passed
+note=_does_rule_activate returns True for sample load rule when agent(south,3) in state

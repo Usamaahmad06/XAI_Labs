@@ -1,0 +1,2 @@
+target,tau_max,n_causal_predictors,n_tcn_features,nmae_causal,nstd_causal,nmae_tcn,nstd_tcn
+cooling_demand,5,6,32,0.09632691440529023,0.12675926939906312,0.12987962651700596,0.15576943157410902

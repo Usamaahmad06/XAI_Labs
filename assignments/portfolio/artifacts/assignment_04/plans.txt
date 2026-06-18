@@ -1,0 +1,11 @@
+Answer: 1
+east(6) east(7) north(1) north(2) north(3) north(4) north(5) sample(2,8)
+Answer: 2
+east(6) east(7) north(2) north(3) north(4) north(5) south(1) sample(2,8)
+Answer: 3
+east(6) east(7) north(2) north(3) north(4) north(5) west(1) sample(2,8)
+Answer: 4
+east(1) east(6) east(7) north(2) north(3) north(4) north(5) sample(2,8)
+Answer: 5
+east(6) east(7) north(2) north(3) north(4) north(5) sample(2,8) sample(4,1)
+SATISFIABLE

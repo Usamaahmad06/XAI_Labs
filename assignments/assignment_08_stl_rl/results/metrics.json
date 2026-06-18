@@ -1,0 +1,21 @@
+{
+  "env": "Pendulum-vBerga",
+  "episodes": 50,
+  "methods": [
+    "stlgym (reward shaping)",
+    "our (Lagrangian TRPO + STL)"
+  ],
+  "constraints": [
+    "|thetadot| <= 0.5",
+    "|torque| <= 0.3"
+  ],
+  "output_plots": [
+    "pendulum_cost.png",
+    "pendulum_reward.png",
+    "pendulum_rho_thetadot_subplots.png",
+    "pendulum_rho_torque_subplots.png",
+    "pendulum_theta.png",
+    "pendulum_thetadot_subplots.png",
+    "pendulum_torque_subplots.png"
+  ]
+}

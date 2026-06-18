@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Accidental local junk
+/conda
+/pip
+/26.1.1
+
+# Large / generated (keep under assignments/results)
+sr_dqn_lab/rewards.png
+nesy_distributional/c51_vs_hc51_returns.png
+stl_rl/results/
+
+# Activation rate (large checkpoints if present)
+activation_rate_lab/models/

@@ -1,0 +1,3 @@
+program=rocksample.lp
+models_found=5
+horizon_steps=16

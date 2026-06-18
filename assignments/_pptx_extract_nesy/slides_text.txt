@@ -1,0 +1,650 @@
+File: 4. XAI_NeSy_Labs.pptx
+Slides: 23
+
+============================================================
+SLIDE 1
+============================================================
+XAI
+Neurosymbolic
+RL
+
+============================================================
+SLIDE 2
+============================================================
+Lab 6 –
+NeSy
+DQN
+Model-free RL:
+-
+greedy
+DRL
+E.g., DQN
+Exploit with
+probability
+When
+exploring
+,
+pick
+random actions under a
+weighted
+probability
+distribution
+,
+focused
+on actions
+entailed
+by
+logical
+heuristics
+Dr. Daniele Meli
+2
+
+============================================================
+SLIDE 3
+============================================================
+Lab 6
+MDP domain:
+DoorKey
+Actions: turn
+left
+, turn
+right
+,
+forward
+, pickup, drop,
+toggle
+Partial
+observability
+(gray area)
+Goal:
+get
+the key of the
+same
+color of the door, use
+it
+to open the door and
+then
+go to the green goal
+cell
+Sparse
+reward
+: +1
+only
+at
+final
+goal
+
+============================================================
+SLIDE 4
+============================================================
+Lab 6
+Partial
+symbolic
+heuristics
+can
+represent
+the policy
+followed
+by the agent
+when
+solving the task:
+
+============================================================
+SLIDE 5
+============================================================
+Lab 6 -
+assignment
+Pull code in
+sr_dqn_lab
+and
+install
+dependencies
+listed
+in
+requirements.txt
+In SR_DQN.py,
+implement
+_
+get_random_action
+to sample one action
+according
+to
+symbolic
+heuristics
+​
+Run
+./run_script.sh
+to
+train
+both
+standard DQN and SR_DQN,
+then
+check
+rewards.png
+to compare
+returns
+​
+​
+Try
+to
+change
+the
+parameters
+in
+train_script.py
+, lines 50-52:
+what
+happens
+?
+​
+
+============================================================
+SLIDE 6
+============================================================
+Lab 7 –
+Distributional
+NeSy
+RL
+A
+distributional
+perspective
+on RL
+From
+expected
+to
+probabilistic
+return
+Z
+Higher
+training
+stability
+More
+robust
+stochastic
+interpretation
+of the policy (
+safety
+)
+Bellemare, Marc G., Will Dabney, and Rémi Munos. "A distributional perspective on reinforcement learning."
+International conference on machine learning
+. PMLR, 2017.
+
+============================================================
+SLIDE 7
+============================================================
+Lab 7 –
+Distributional
+NeSy
+RL
+A
+distributional
+perspective
+on RL
+From
+expected
+to
+probabilistic
+return
+Z
+Higher
+training
+stability
+More
+robust
+stochastic
+interpretation
+of the policy (
+safety
+)
+Bellemare, Marc G., Will Dabney, and Rémi Munos. "A distributional perspective on reinforcement learning."
+International conference on machine learning
+. PMLR, 2017.
+C51: dist. DQN over N=51
+bins
+
+============================================================
+SLIDE 8
+============================================================
+Lab 7 –
+Distributional
+NeSy
+RL
+A
+distributional
+perspective
+on RL
+From
+expected
+to
+probabilistic
+return
+Z
+Higher
+training
+stability
+More
+robust
+stochastic
+interpretation
+of the policy (
+safety
+)
+Bellemare, Marc G., Will Dabney, and Rémi Munos. "A distributional perspective on reinforcement learning."
+International conference on machine learning
+. PMLR, 2017.
+(C51)
+
+============================================================
+SLIDE 9
+============================================================
+Lab 7 –
+Distributional
+NeSy
+RL
+Can
+we
+use
+logics
+to
+bias
+dist. RL?
+Rules induce a
+probability
+distribution
+over actions
+Suggested
+actions -> 0.8
+Not
+suggested
+-> 0.2
+Normalize
+->
+logical
+policy
+distribution
+
+============================================================
+SLIDE 10
+============================================================
+Lab 7 –
+Distributional
+Nesy
+RL
+How to
+modify
+the
+return
+distribution
+for
+suggested
+actions?
+Transforming
+p(
+s,a
+)
+
+============================================================
+SLIDE 11
+============================================================
+Lab 7 –
+Distributional
+Nesy
+RL
+NeSy
+C51
+Epsilon-
+greedy
+modulation
+->
+optimality
+with
+bad
+heuristics
+Master’s
+thesis
++
+exam
+project
+Submitted
+scientific
+paper
+
+============================================================
+SLIDE 12
+============================================================
+Lab 7 – Environment
+MDP domain:
+DoorKey
+Actions: turn
+left
+, turn
+right
+,
+forward
+, pickup, drop,
+toggle
+Partial
+observability
+(gray area)
+Goal:
+get
+the key of the
+same
+color of the door, use
+it
+to open the door and
+then
+go to the green goal
+cell
+Sparse
+reward
+: +1
+only
+at
+final
+goal
+Same
+as
+Lab 6!
+
+============================================================
+SLIDE 13
+============================================================
+Lab 7 - Environment
+Partial
+symbolic
+heuristics
+can
+represent
+the policy
+followed
+by the agent
+when
+solving the task:
+
+============================================================
+SLIDE 14
+============================================================
+Lab 7 -
+assignment
+Pull code in
+nesy_distributional
+and
+install
+requirements.txt
+Implement
+the product in
+h_c51_product.py
+following the
+instructions
+in the
+comments
+Run
+./run
+_experiments.py
+to
+train
+both
+standard
+C51and
+H
+_
+C51
+,
+then
+check the
+produced
+png to
+compare
+returns
+​
+​
+Remember
+to
+increase
+the
+number
+of training steps in
+params.env
+after debugging!
+
+============================================================
+SLIDE 15
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Temporal
+logics
+are
+suitable
+for
+constraint
+specifications
+Never
+(
+always
+don’t
+) do
+this
+Strict
+goal
+reachability
+:
+eventually
+get
+there
+How to
+constrain
+RL?
+Shielding
+->
+limit
+exploration
+Lagrangian
+RL
+Paternain
+, Santiago, et al. "Constrained reinforcement learning has zero duality gap."
+Advances in Neural Information Processing Systems
+32 (2019).
+
+============================================================
+SLIDE 16
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Lagrangian RL
+Two
+critics
+J for the
+value
+estimator
+for the cost estimator
+Stooke
+, Adam, Joshua
+Achiam
+, and Pieter
+Abbeel
+. "Responsive safety in reinforcement learning by
+pid
+lagrangian
+methods."
+International Conference on Machine Learning
+. PMLR, 2020.
+
+============================================================
+SLIDE 17
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Lagrangian RL
+Two
+critics
+J for the
+value
+estimator
+for the cost estimator
+Stooke
+, Adam, Joshua
+Achiam
+, and Pieter
+Abbeel
+. "Responsive safety in reinforcement learning by
+pid
+lagrangian
+methods."
+International Conference on Machine Learning
+. PMLR, 2020.
+Safety-Gymnasium
+Documentation
+PKU-
+Alignment
+/
+omnisafe
+: JMLR:
+OmniSafe
+is
+an
+infrastructural
+framework for
+accelerating
+SafeRL
+research
+.
+
+============================================================
+SLIDE 18
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Can
+we
+define
+an immediate cost
+function
+C
+based
+on
+logics
+?
+We
+handle
+continuous
+signal
+->
+Signal
+Temporal
+Logics
+(STL)
+We
+need
+to
+quantify
+the
+satisfaction
+of STL
+formulae
+Robustness
+Fainekos
+, Georgios E., and George J. Pappas. "Robustness of temporal logic specifications for continuous-time signals."
+Theoretical Computer Science
+410.42 (2009): 4262-4291.
+
+============================================================
+SLIDE 19
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Recursive
+definition
+for the
+robustness
+,
+assuming
+a formula in the form
+
+============================================================
+SLIDE 20
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Task:
+pendulum
+STL
+constraints
+
+============================================================
+SLIDE 21
+============================================================
+Lab 8 – STL-
+constrained
+RL
+Expected
+results
+Better
+satisfaction
+of costs and
+convergence
+than
+classical
+reward
+shaping
+
+============================================================
+SLIDE 22
+============================================================
+Lab 8 – code
+Main
+folder:
+stl_rl
+Environment: env/Pendulum.py
+RL
+algorithm
+: TRPO (agent_pendulum.py)
+STL
+robustness
+computed
+via RTAMT
+nickovic
+/
+rtamt
+: Specification-based real-time monitoring library
+env
+/
+pendulum_eventually_costs.yaml
+
+============================================================
+SLIDE 23
+============================================================
+Lab 8 -
+assignment
+Implement
+also
+the cost on the torque
+In Pendulum.py, compute the costs in the step
+function
+Run
+RL with ./pendulum_experiments.sh
+Plot with plot.py (
+results
+in
+results
+/
+pendulum
+/media)
+Try
+and
+change
+the costs
+removing
+the
+eventually
+:
+what
+happens
+?

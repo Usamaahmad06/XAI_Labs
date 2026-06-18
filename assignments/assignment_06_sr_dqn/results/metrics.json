@@ -1,0 +1,10 @@
+{
+  "map": "5x5",
+  "steps": 100000,
+  "models": [
+    "DQN",
+    "SR_DQN"
+  ],
+  "output_plot": "rewards.png",
+  "note": "Fill final_reward values after inspecting plot"
+}

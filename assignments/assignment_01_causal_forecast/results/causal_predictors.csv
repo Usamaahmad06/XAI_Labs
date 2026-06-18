@@ -1,0 +1,7 @@
+variable,lag
+cooling_demand,-1
+cooling_demand,-2
+outdoor_relative_humidity,-4
+outdoor_relative_humidity,-5
+electricity_pricing_predicted_24h,-3
+outdoor_dry_bulb_temperature,-2

@@ -1,0 +1,10 @@
+{
+  "env": "MiniGrid-DoorKey-5x5-v0",
+  "steps_per_model": 50000,
+  "models": [
+    "C51",
+    "H-C51"
+  ],
+  "output_plot": "c51_vs_hc51_returns.png",
+  "note": "H-C51 sustains ~0.5-0.8 return; C51 baseline near 0"
+}

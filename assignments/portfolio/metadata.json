@@ -1,0 +1,100 @@
+{
+  "collected_at": "2026-06-16T03:53:37",
+  "labs": [
+    {
+      "number": 1,
+      "folder": "assignment_01_causal_forecast",
+      "title": "Causal forecasting",
+      "status": "has_results",
+      "files": [
+        "causal_predictors.csv",
+        "feature_importance.csv",
+        "feature_importance.png",
+        "metrics.json",
+        "metrics_summary.csv",
+        "predictions.png"
+      ]
+    },
+    {
+      "number": 2,
+      "folder": "assignment_02_causal_anomaly",
+      "title": "Causal anomaly detection",
+      "status": "has_results",
+      "files": [
+        "feature_importance.png",
+        "metrics.json",
+        "metrics_summary.csv",
+        "per_attack.csv"
+      ]
+    },
+    {
+      "number": 3,
+      "folder": "assignment_03_asp",
+      "title": "ASP Rocksample planning",
+      "status": "has_results",
+      "files": [
+        "plans.txt",
+        "summary.txt"
+      ]
+    },
+    {
+      "number": 4,
+      "folder": "assignment_04_ilasp",
+      "title": "ILASP learning + planning",
+      "status": "has_results",
+      "files": [
+        "learned_rules.txt",
+        "plans.txt",
+        "summary.txt"
+      ]
+    },
+    {
+      "number": 5,
+      "folder": "assignment_05_activation_rate",
+      "title": "Activation rate (RWARE)",
+      "status": "has_results",
+      "files": [
+        "activation_rate_20260616005507.csv",
+        "plot_activation_rate.pdf",
+        "test_result.txt"
+      ]
+    },
+    {
+      "number": 6,
+      "folder": "assignment_06_sr_dqn",
+      "title": "SR-DQN (NeSy DQN)",
+      "status": "has_results",
+      "files": [
+        "metrics.json",
+        "rewards.png"
+      ]
+    },
+    {
+      "number": 7,
+      "folder": "assignment_07_nesy_distributional",
+      "title": "H-C51 (NeSy distributional)",
+      "status": "has_results",
+      "files": [
+        "c51_vs_hc51_returns.png",
+        "metrics.json",
+        "metrics_summary.csv"
+      ]
+    },
+    {
+      "number": 8,
+      "folder": "assignment_08_stl_rl",
+      "title": "STL RL Pendulum",
+      "status": "has_results",
+      "files": [
+        "metrics.json",
+        "pendulum_cost.png",
+        "pendulum_reward.png",
+        "pendulum_rho_thetadot_subplots.png",
+        "pendulum_rho_torque_subplots.png",
+        "pendulum_theta.png",
+        "pendulum_thetadot_subplots.png",
+        "pendulum_torque_subplots.png"
+      ]
+    }
+  ]
+}

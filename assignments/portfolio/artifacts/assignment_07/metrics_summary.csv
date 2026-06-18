@@ -1,0 +1,2 @@
+env,steps_per_model,models,output_plot,note
+MiniGrid-DoorKey-5x5-v0,50000,"['C51', 'H-C51']",c51_vs_hc51_returns.png,H-C51 sustains ~0.5-0.8 return; C51 baseline near 0

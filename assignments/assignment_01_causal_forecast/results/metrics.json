@@ -1,0 +1,44 @@
+{
+  "target": "cooling_demand",
+  "tau_max": 5,
+  "n_causal_predictors": 6,
+  "n_tcn_features": 32,
+  "nmae_causal": 0.09632691440529023,
+  "nstd_causal": 0.12675926939906312,
+  "nmae_tcn": 0.12987962651700596,
+  "nstd_tcn": 0.15576943157410902,
+  "causal_predictors": [
+    {
+      "variable": "cooling_demand",
+      "lag": -1
+    },
+    {
+      "variable": "cooling_demand",
+      "lag": -2
+    },
+    {
+      "variable": "outdoor_relative_humidity",
+      "lag": -4
+    },
+    {
+      "variable": "outdoor_relative_humidity",
+      "lag": -5
+    },
+    {
+      "variable": "electricity_pricing_predicted_24h",
+      "lag": -3
+    },
+    {
+      "variable": "outdoor_dry_bulb_temperature",
+      "lag": -2
+    }
+  ],
+  "causal_feature_importance": {
+    "cooling_demand (t--1)": 0.9999999999987831,
+    "cooling_demand (t--2)": 0.19413523741553182,
+    "outdoor_relative_humidity (t--4)": 0.052735345229335324,
+    "outdoor_relative_humidity (t--5)": 0.00319974192116975,
+    "electricity_pricing_predicted_24h (t--3)": 0.11109445950368005,
+    "outdoor_dry_bulb_temperature (t--2)": 0.26180262691447437
+  }
+}

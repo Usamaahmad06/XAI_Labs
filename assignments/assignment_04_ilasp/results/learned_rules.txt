@@ -1,0 +1,10 @@
+# Expected ILASP hypothesis (Lab 4 assignment 1)
+# Run: ILASP --version=4 ilasp_task.las
+# Slides specify rules like:
+
+good(R) :- dist(R, D), D < 1.
+good(R) :- guess(R, V), V > 80.
+
+# These were placed in rocksample_ilp.lp for assignment 2.
+# After running ILASP on the full task, replace with the exact output
+# from ILASP (pick hypothesis with fewest counterexamples if using -d).
