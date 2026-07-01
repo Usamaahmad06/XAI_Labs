@@ -1,7 +1,7 @@
 # Assignment 7 — Distributional NeSy RL (H-C51)
 
 **Slides:** `4. XAI_NeSy_Labs.pptx` — Lab 7  
-**Source:** `nesy_distributional/`
+**Source:** `code/` (`h_c51_product.py`, `run_experiments.py`)
 
 ## Goal
 
@@ -9,7 +9,7 @@ Combine **C51** (distributional DQN) with **logical heuristics** via a product o
 
 ## TODO
 
-Implement the product in `nesy_distributional/h_c51_product.py` (see TODO comments).
+Implement the product in `code/h_c51_product.py` (see TODO comments).
 
 ## Run
 

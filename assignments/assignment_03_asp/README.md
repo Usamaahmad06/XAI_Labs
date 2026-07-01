@@ -1,6 +1,6 @@
 # Assignment 3 — ASP (Answer Set Programming) — Rocksample
 
-**Source:** `asp_lab/rocksample.lp`  
+**Source:** `code/rocksample.lp`, `code/run_incmode.py`  
 **Slides:** Lab 3 in `2. XAI_ASP_labs.pptx`
 
 ## What you do (no ML training)
@@ -22,7 +22,7 @@ Sample **all good rocks** on a grid. Rocks 0 and 1 are good; rocks 2–4 are bad
 
 ## Your TODO
 
-Complete `#program step(t).` in `asp_lab/rocksample.lp`:
+Complete `#program step(t).` in `code/rocksample.lp`:
 
 1. **Preconditions** — e.g. can only `sample(R,t)` when agent is at rock R’s cell
 2. **Effects** — e.g. `east(t)` moves `at/2` one cell right
@@ -41,8 +41,8 @@ python assignments/run_assignment.py 3
 Or directly:
 
 ```powershell
-cd asp_lab
-python run_incmode.py rocksample.lp 0 --output-dir ../assignments/assignment_03_asp/results
+cd assignments\assignment_03_asp\code
+python run_incmode.py rocksample.lp 0 --output-dir ../results
 ```
 
 On Linux with native Clingo you can also use: `clingo rocksample.lp 0`

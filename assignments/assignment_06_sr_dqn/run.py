@@ -1,5 +1,5 @@
 """
-Run Lab 6 (SR-DQN), save outputs to assignments/assignment_06_sr_dqn/results/.
+Run Lab 6 (SR-DQN), save outputs to results/.
 """
 from __future__ import annotations
 
@@ -9,9 +9,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
-LAB = REPO / "sr_dqn_lab"
-OUT = REPO / "assignments" / "assignment_06_sr_dqn" / "results"
+ASSIGNMENT = Path(__file__).resolve().parent
+LAB = ASSIGNMENT / "code"
+OUT = ASSIGNMENT / "results"
 PYTHON = Path(r"C:\Users\Usama\miniconda3\envs\causalai\python.exe")
 if not PYTHON.is_file():
     PYTHON = Path(sys.executable)
@@ -35,7 +35,7 @@ def main() -> int:
         shutil.copy2(rewards, OUT / "rewards.png")
         print(f"Saved: {OUT / 'rewards.png'}")
     else:
-        print("Warning: rewards.png not found in sr_dqn_lab/")
+        print("Warning: rewards.png not found in code/")
 
     metrics = {
         "map": "5x5",

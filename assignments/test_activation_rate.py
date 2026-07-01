@@ -3,9 +3,15 @@ import importlib.util
 from pathlib import Path
 import numpy as np
 
-helpers_path = Path(__file__).resolve().parents[1] / "activation_rate_lab" / "src" / "runners" / "helpers.py"
+helpers_path = (
+    Path(__file__).resolve().parent
+    / "assignment_05_activation_rate"
+    / "code"
+    / "helpers.py"
+)
 spec = importlib.util.spec_from_file_location("helpers", helpers_path)
 helpers = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
 spec.loader.exec_module(helpers)
 
 obs = np.zeros((5, 7, 7))

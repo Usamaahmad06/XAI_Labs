@@ -17,6 +17,7 @@ Author: (your name)
 
 # ================== IMPORTS ==================
 import os
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import warnings
@@ -31,8 +32,8 @@ warnings.filterwarnings('ignore', category=ConstantInputWarning)
 # ================== GLOBAL CONFIG ==================
 ALPHA = 0.05
 TRAINING_FRAC = 0.7
-LAB_DIR = os.path.dirname(os.path.abspath(__file__))
-PREFIX = os.path.join(LAB_DIR, "pepper_csv") + os.sep
+REPO_ROOT = Path(__file__).resolve().parents[3]
+PREFIX = str(REPO_ROOT / "causal_lab" / "pepper_csv") + os.sep
 TASK = "pepper"
 MAX_FREQ_COMPONENTS = 5
 

@@ -35,7 +35,9 @@ python assignments/collect_portfolio.py
 
 ```
 assignment_XX_name/
+  code/          # your implementation (scripts, .lp, lab package)
   README.md      # what to do, how to run
   SUMMARY.md     # one-page results for portfolio
   results/       # plots, metrics.json, logs
+  run.py         # labs 6–8 only (training + copy results)
 ```

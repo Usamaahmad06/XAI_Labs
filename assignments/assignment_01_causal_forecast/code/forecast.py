@@ -3,6 +3,10 @@ warnings.filterwarnings("ignore")
 
 import json
 import os
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+CITYLEARN_DIR = REPO_ROOT / "causal_lab" / "citylearn"
 import numpy as np
 import pandas as pd
 import random
@@ -57,7 +61,7 @@ set_seeds(42)
 # -------------------------- DATA LOADING --------------------------
 def load_citylearn(building_id: int):
     """Load CityLearn building data and auxiliary files, concatenate columns."""
-    base = "citylearn"
+    base = str(CITYLEARN_DIR)
     b = pd.read_csv(os.path.join(base, f"Building_{building_id}.csv"))
     carbon = pd.read_csv(os.path.join(base, "carbon_intensity.csv"))
     pricing = pd.read_csv(os.path.join(base, "pricing.csv"))

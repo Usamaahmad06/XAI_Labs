@@ -139,8 +139,8 @@ python assignments/build_presentation.py   # regenerates PPTX
 ```powershell
 .\assignments\run.ps1 1
 # or
-cd causal_lab
-python forecast.py --output-dir ../assignments/assignment_01_causal_forecast/results
+cd assignments/assignment_01_causal_forecast/code
+python forecast.py --output-dir ../results
 ```
 
 **Result files:** `predictions.png`, `feature_importance.png`, `metrics_summary.csv`, `causal_predictors.csv`
@@ -179,9 +179,9 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Find action sequences that sample all **good** rocks on a grid.
 
 **Method:**
-- Answer Set Programming in `asp_lab/rocksample.lp`
+- Answer Set Programming in `assignments/assignment_03_asp/code/rocksample.lp`
 - Implemented `#program step(t).` — preconditions, effects, constraints
-- Clingo incremental search via `asp_lab/run_incmode.py`
+- Clingo incremental search via `code/run_incmode.py`
 
 **Results:**
 - **5** valid plans found (`models_found=5`, horizon 16 steps)
@@ -201,8 +201,8 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Learn which rocks are good from `dist`/`guess`, then plan to sample them.
 
 **Method:**
-- Mode bias in `ilasp_lab/assignment/ilasp_task.las`
-- Learned rules in `rocksample_ilp.lp` + ASP `step(t)` for planning
+- Mode bias in `assignments/assignment_04_ilasp/code/ilasp_task.las`
+- Learned rules in `code/rocksample_ilp.lp` + ASP `step(t)` for planning
 - **Part A** (ILASP learn): Linux/WSL only — `ILASP --version=4 ilasp_task.las`
 - **Part B** (planning): Windows via `run_incmode.py`
 
@@ -224,7 +224,7 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Measure how often logical rules match MAPPO agent actions on RWARE warehouse.
 
 **Method:**
-- Implemented `_does_rule_activate()` in `activation_rate_lab/src/runners/parallel_runner.py`
+- Implemented `_does_rule_activate()` in `assignments/assignment_05_activation_rate/code/helpers.py`
 - Compare observation atoms to rule bodies per agent/action
 - Evaluated on checkpoint at 1M steps (theory index 0)
 
@@ -251,7 +251,7 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Guide DQN exploration with symbolic heuristics on MiniGrid DoorKey.
 
 **Method:**
-- Implemented `_get_random_action()` in `sr_dqn_lab/SR_DQN.py`
+- Implemented `_get_random_action()` in `assignments/assignment_06_sr_dqn/code/SR_DQN.py`
 - Weighted sampling: `conf_level` on rule-suggested actions, uniform on others
 - Trained DQN vs SR-DQN on `MiniGrid-DoorKey-5x5-v0`, **100k** steps
 
@@ -273,7 +273,7 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Combine C51 (distributional DQN) with logical heuristics via PMF product.
 
 **Method:**
-- In `nesy_distributional/h_c51_product.py` → `get_action()`:
+- In `assignments/assignment_07_nesy_distributional/code/h_c51_product.py` → `get_action()`:
   1. Multiply PMFs of rule-suggested actions by `1 + ε · rule_pmf`
   2. Renormalize over atoms
   3. Compute Q-values from combined distribution
@@ -297,7 +297,7 @@ Requires Pepper CSV data in `causal_lab/pepper_csv/` (see course data link in la
 **Goal:** Use STL robustness as cost in Lagrangian TRPO; constrain |θ̇| and |τ|.
 
 **Method:**
-- Implemented `step()` in `stl_rl/env/Pendulum.py`:
+- Implemented `step()` in `assignments/assignment_08_stl_rl/code/env/Pendulum.py`:
   - Build τ-horizon `[thetadot, torque]` trajectory
   - STL robustness ρ via RTAMT (`eventually always |thetadot| ≤ 0.5`, `|torque| ≤ 0.3`)
   - Costs: `tanh(-β · ρ)` per constraint (β = 100)
@@ -361,15 +361,21 @@ Each assignment also has `SUMMARY.md` (one-page report) and `README.md` (lab-spe
 
 ```
 XAI_Labs/
-├── assignments/          # All 8 completed assignments + portfolio
-├── causal_lab/           # Labs 1–2 source
-├── asp_lab/              # Lab 3 ASP
-├── ilasp_lab/            # Lab 4 ILASP
-├── activation_rate_lab/  # Lab 5 MAPPO + rules
-├── sr_dqn_lab/           # Lab 6 SR-DQN
-├── nesy_distributional/  # Lab 7 H-C51
-├── stl_rl/               # Lab 8 STL Pendulum
-└── README.md             # This file
+├── assignments/
+│   ├── assignment_01_causal_forecast/code/   # forecast.py
+│   ├── assignment_02_causal_anomaly/code/    # anomaly_detection.py
+│   ├── assignment_03_asp/code/               # rocksample.lp, run_incmode.py
+│   ├── assignment_04_ilasp/code/             # ilasp_task.las, rocksample_ilp.lp
+│   ├── assignment_05_activation_rate/code/     # helpers.py (_does_rule_activate)
+│   ├── assignment_06_sr_dqn/code/            # SR-DQN lab package
+│   ├── assignment_07_nesy_distributional/code/  # H-C51 lab package
+│   ├── assignment_08_stl_rl/code/            # STL Pendulum lab package
+│   └── portfolio/                            # PPTX + collected artifacts
+├── causal_lab/           # Shared course data (citylearn/, pepper_csv/)
+├── asp_lab/              # Upstream ASP examples (toh.lp, verify_plan.py)
+├── ilasp_lab/            # Upstream ILASP course materials
+├── activation_rate_lab/  # Lab 5 training infrastructure (imports code/helpers.py)
+└── README.md
 ```
 
 ---

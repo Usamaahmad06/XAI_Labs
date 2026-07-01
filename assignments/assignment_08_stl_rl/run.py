@@ -1,5 +1,5 @@
 """
-Run Lab 8 (STL RL Pendulum), save outputs to assignments/assignment_08_stl_rl/results/.
+Run Lab 8 (STL RL Pendulum), save outputs to results/.
 """
 from __future__ import annotations
 
@@ -10,9 +10,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
-LAB = REPO / "stl_rl"
-OUT = REPO / "assignments" / "assignment_08_stl_rl" / "results"
+ASSIGNMENT = Path(__file__).resolve().parent
+LAB = ASSIGNMENT / "code"
+OUT = ASSIGNMENT / "results"
 PYTHON = Path(r"C:\Users\Usama\miniconda3\envs\causalai\python.exe")
 if not PYTHON.is_file():
     PYTHON = Path(sys.executable)

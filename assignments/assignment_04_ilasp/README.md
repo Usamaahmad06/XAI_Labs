@@ -2,16 +2,19 @@
 
 **Slides:** `3. XAI_ILASP_Lab.pptx` — Lab 4
 
+**Source:** `code/ilasp_task.las`, `code/rocksample_ilp.lp`, `code/run_incmode.py`
+
 ## Part A — Learn `good(R)` rules (`ilasp_task.las`)
 
 **Goal:** Induce which rocks are good from `dist(R,D)` and `guess(R,V)` examples.
 
-**Implemented:** Mode bias in `ilasp_lab/assignment/ilasp_task.las`:
+**Implemented:** Mode bias in `code/ilasp_task.las`:
 - Head: `good(R)`
 - Body: `dist`, `guess`, comparisons (`D < 1`, `V > 80`, …)
 
 **Run (Linux / Docker):**
 ```bash
+cd assignments/assignment_04_ilasp/code
 ILASP --version=4 ilasp_task.las
 ```
 
@@ -23,7 +26,7 @@ ILASP --version=4 ilasp_task.las
 
 ```powershell
 conda activate causalai
-python asp_lab/run_incmode.py ilasp_lab/assignment/rocksample_ilp.lp 3 --output-dir assignments/assignment_04_ilasp/results
+python assignments/run_assignment.py 4
 ```
 
 **Status:** Done (planning verified; run ILASP in Docker for full learned hypothesis file)

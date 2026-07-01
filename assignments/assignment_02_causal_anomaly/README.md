@@ -2,7 +2,7 @@
 
 **Goal:** Unsupervised online anomaly detection using PCMCI + coefficient monitoring.
 
-**Source:** `causal_lab/anomaly_detection.py`
+**Source:** `code/anomaly_detection.py`
 
 ## 1. Download data
 

@@ -28,3 +28,8 @@ stl_rl/results/
 
 # Activation rate (large checkpoints if present)
 activation_rate_lab/models/
+
+# Local study guide (not pushed)
+assignments/portfolio/XAI_Complete_Study_Guide.md
+assignments/portfolio/XAI_Complete_Study_Guide.docx
+assignments/portfolio/~$*

@@ -2,7 +2,7 @@
 
 **Goal:** Predict building `cooling_demand` using Tigramite `Prediction` vs a TCN baseline.
 
-**Source:** `causal_lab/forecast.py`
+**Source:** `code/forecast.py`
 
 **Run from repo root:**
 

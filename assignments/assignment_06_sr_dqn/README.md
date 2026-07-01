@@ -1,7 +1,7 @@
 # Assignment 6 — NeSy DQN (SR-DQN)
 
 **Slides:** `4. XAI_NeSy_Labs.pptx` — Lab 6  
-**Source:** `sr_dqn_lab/`
+**Source:** `code/` (`SR_DQN.py`, `train_script.py`)
 
 ## Goal
 
@@ -9,7 +9,7 @@ Symbolic-heuristic-guided exploration in DQN: when exploring, sample actions bia
 
 ## TODO
 
-Implement `_get_random_action()` in `sr_dqn_lab/SR_DQN.py`.
+Implement `_get_random_action()` in `code/SR_DQN.py`.
 
 ## Run
 
@@ -19,10 +19,10 @@ cd D:\XAI\XAI
 .\assignments\run.ps1 6
 ```
 
-Or WSL/Linux:
+Or directly:
 
 ```bash
-cd sr_dqn_lab
+cd assignments/assignment_06_sr_dqn/code
 python train_script.py --map 5x5 --steps 100000
 ```
 

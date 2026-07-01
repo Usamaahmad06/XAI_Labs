@@ -1,7 +1,7 @@
 # Assignment 8 — STL-constrained RL (Pendulum)
 
 **Slides:** `4. XAI_NeSy_Labs.pptx` — Lab 8  
-**Source:** `stl_rl/`
+**Source:** `code/` (`env/Pendulum.py`, training scripts)
 
 ## Goal
 
@@ -9,19 +9,23 @@ Use **Signal Temporal Logic (STL)** robustness as cost in **Lagrangian TRPO** on
 
 ## TODO
 
-Implement STL cost on torque in `stl_rl/env/Pendulum.py` (`step` function).
+Implement STL cost on torque in `code/env/Pendulum.py` (`step` function).
 
 ## Run
 
-WSL/Linux recommended:
+```powershell
+conda activate causalai
+cd D:\XAI\XAI
+.\assignments\run.ps1 8
+```
+
+Or WSL/Linux:
 
 ```bash
-cd stl_rl
+cd assignments/assignment_08_stl_rl/code
 ./pendulum_experiments.sh
 python plot.py
 ```
-
-Then copy outputs to `assignments/assignment_08_stl_rl/results/`.
 
 ## Results (saved to `results/`)
 

@@ -1,5 +1,5 @@
 """
-Run Lab 7 (H-C51), save outputs to assignments/assignment_07_nesy_distributional/results/.
+Run Lab 7 (H-C51), save outputs to results/.
 """
 from __future__ import annotations
 
@@ -9,9 +9,9 @@ import subprocess
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[1]
-LAB = REPO / "nesy_distributional"
-OUT = REPO / "assignments" / "assignment_07_nesy_distributional" / "results"
+ASSIGNMENT = Path(__file__).resolve().parent
+LAB = ASSIGNMENT / "code"
+OUT = ASSIGNMENT / "results"
 PYTHON = Path(r"C:\Users\Usama\miniconda3\envs\causalai\python.exe")
 if not PYTHON.is_file():
     PYTHON = Path(sys.executable)

@@ -1,5 +1,7 @@
 # 🧠 Causal AI Lab – Anomaly Detection & Forecasting
 
+> **Assignment code** for Labs 1–2 lives in `assignments/assignment_01_causal_forecast/code/` and `assignments/assignment_02_causal_anomaly/code/`. This folder keeps **shared course data** (`citylearn/`, `pepper_csv/`).
+
 This repository provides two hands-on tutorials demonstrating **Causal Discovery**, **Anomaly Detection**, and **Forecasting** in time-series data using Python.
 
 ## ⚙️ Environment Setup
